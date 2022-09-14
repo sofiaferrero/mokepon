@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mokepón</title>
+    <link rel="stylesheet" href="./estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1 class="title">MOKEPÓN</h1>
+    <section id="seleccionar-mascota">
+        <!-- <p class="icons">🌱🔥💧</p> -->
+        <h2 class="subtitle">Selecciona a tu mascota</h2>
+        <div id="cards-container" class="cards">
+        </div>
+        <button id="button-pets">Seleccionar</button>
+    </section>
+    <section id="ver-mapa">
+        <h2>Recorre el mapa con tu Mokepon para ir a la batalla</h2>
+        <canvas id="mapa"></canvas>
+        <button class="button-up" onmouseup="detenerMovimiento()" onmousedown="moverArriba()"></button>
+        <div class="mapa-botones.container">
+            <button class="button-left" onmouseup="detenerMovimiento()" onmousedown="moverIzquierda()"></button>
+            <button class="button-down" onmouseup="detenerMovimiento()" onmousedown="moverAbajo()"></button>
+            <button class="button-right" onmouseup="detenerMovimiento()" onmousedown="moverDerecha()"></button>
+        </div>
+    </section>
+    <section id="seleccionar-ataque">
+        <h2>Selecciona tu ataque</h2>
+        <div id="contenedor-ataques">
+        </div>
+        <div>
+            <section id="mensajes">
+                <p id="resultado">BATALLA!!</p>
+            </section>
+            <section id="reiniciar">
+                <button id="button-game">Volver a jugar!</button>
+            </section>
+        </div>
+        <div class="batalla-parrafos">
+            <p id="mascota-jugador"></p>
+            <p id="mascota-enemigo"></p>
+            <p id="vidas-jugador">0</p>
+            <p id="vidas-enemigo">0</p>
+            <div id="ataque-jugador"></div>
+            <div id="ataque-enemigo"></div>
+        </div>
+    </section>
+    <script src="./js/nodes.js"></script>
+    <script src="./js/base.js"></script>
+</body>
+</html>
